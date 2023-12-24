@@ -1,0 +1,35 @@
+<!-- EXTRACCION DE CONTENIDO A BASE.HTML -->
+{% extends 'base.html' %}
+
+<!-- CONTENIDO DE PAGINÁ -->
+{% block content %}
+
+  <div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-sm-8">
+        <div class="card">
+          <div class="card-header">
+            <h1 class="text-center py-2"> {% block title %} INICIO DE SESSION {% endblock %} </h1>
+          </div>
+
+          <div class="card-body">
+            <form class="" action="" method="post">
+              <div class="form-group py-2">
+                <label for="username"> NOMBRE DE USUARIO </label>
+                <input class="form-control mt-1" type="text" id="username" name="username" required>
+              </div>
+              <div class="form-group mt-4">
+                <label for="password"> CONTRASEÑA </label>
+                <input class="form-control mt-1" type="password" id="password" name="password" required>
+              </div>
+              <div class="text-center mt-4">
+                <input class="btn btn-primary" type="submit" value="INICIAR SESSION">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}
